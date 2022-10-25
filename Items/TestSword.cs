@@ -26,6 +26,8 @@ namespace SwordsPlus.Items
 			Item.rare = 2;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
+			Item.shoot = ProjectileID.AmethystBolt;
+			Item.shootSpeed = 8f;
 		}
 
 		public override void AddRecipes()
