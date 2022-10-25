@@ -19,7 +19,7 @@ namespace SwordsPlus.Items
 			Item.width = 40;
 			Item.height = 40;
 			Item.useTime = 10;
-			Item.useAnimation = 20;
+			Item.useAnimation = 10;
 			Item.useStyle = 1;
 			Item.knockBack = 6;
 			Item.value = 10000;
