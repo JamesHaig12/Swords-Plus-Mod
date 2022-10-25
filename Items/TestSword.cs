@@ -14,11 +14,11 @@ namespace SwordsPlus.Items
 
 		public override void SetDefaults()
 		{
-			Item.damage = 50;
+			Item.damage = 50000;
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 40;
 			Item.height = 40;
-			Item.useTime = 20;
+			Item.useTime = 10;
 			Item.useAnimation = 20;
 			Item.useStyle = 1;
 			Item.knockBack = 6;
