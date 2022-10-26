@@ -1,7 +1,10 @@
 using Microsoft.Xna.Framework;
+using SwordsPlus.Items.Projectiles;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Audio;
+using Terraria.Audio.SoundEngine;
 
 namespace SwordsPlus.Items.Weapons
 {
@@ -27,22 +30,26 @@ namespace SwordsPlus.Items.Weapons
 			Item.rare = 2;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
+			Item.shoot = ModContent.ProjectileType<FlameProjectile>();
+			Item.shootSpeed = 8f;
 		}
 
         public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
         {
             // Add the Onfire buff to the NPC for 1 second when the weapon hits an NPC
             // 60 frames = 1 second
-            target.AddBuff(BuffID.OnFire, 512);
+            target.AddBuff(BuffID.OnFire, 180);
         }
 
 		public override void MeleeEffects(Player player, Rectangle hitbox)
 		{
 			// Creates a new dust particle effect on weapon swing at the hitbox, sets gravity off and velocity to 0 so it doesnt fly everywhere
-			int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, DustID.FlameBurst, 0f, 0f, 0, default(Color),2f);
+			int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, DustID.Flare, 0f, 0f, 0, default(Color),2f);
 			Main.dust[dust].noGravity = true;
 			Main.dust[dust].velocity *= 0f;
 		}
+
+
 
 		public override void AddRecipes()
 		{
