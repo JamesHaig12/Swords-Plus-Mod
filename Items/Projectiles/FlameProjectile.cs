@@ -3,6 +3,7 @@ using System;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using Terraria.Audio;
 
 namespace SwordsPlus.Items.Projectiles
 {
@@ -26,6 +27,11 @@ namespace SwordsPlus.Items.Projectiles
             Projectile.light = 0.35f; // Light emission
             Projectile.ignoreWater = false; // Will slow in water
             Projectile.tileCollide = true; // On collision disperses
+        }
+
+        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        {
+            SoundEngine.PlaySound(new SoundStyle("SwordsPlus/Sounds/FlameImpact").WithVolumeScale(10f).WithPitchOffset(.3f));
         }
 
         public override void AI()
