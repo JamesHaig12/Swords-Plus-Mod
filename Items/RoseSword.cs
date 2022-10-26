@@ -16,8 +16,9 @@ namespace SwordsPlus.Items
 		{
 			Item.damage = 55;
 			Item.DamageType = DamageClass.Melee;
-			Item.width = 10;
-			Item.height = 10;
+			Item.width = 260;
+			Item.height = 260;
+			Item.scale = 0.25f;
 			Item.useTime = 25;
 			Item.useAnimation = 25;
 			Item.useStyle = 3;
