@@ -1,8 +1,9 @@
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace SwordsPlus.Items
+namespace SwordsPlus.Items.Weapons
 {
 	public class RagingRuby : ModItem
 	{
@@ -14,10 +15,10 @@ namespace SwordsPlus.Items
 
 		public override void SetDefaults()
 		{
-			Item.damage = 22;
+			Item.damage = 56;
 			Item.DamageType = DamageClass.Melee;
-			Item.width = 90;
-			Item.height = 90;
+			Item.width = 87;
+			Item.height = 87;
 			Item.useTime = 30;
 			Item.useAnimation = 30;
 			Item.useStyle = 1;
@@ -32,10 +33,18 @@ namespace SwordsPlus.Items
         {
             // Add the Onfire buff to the NPC for 1 second when the weapon hits an NPC
             // 60 frames = 1 second
-            target.AddBuff(BuffID.OnFire, 60);
+            target.AddBuff(BuffID.OnFire, 512);
         }
 
-        public override void AddRecipes()
+		public override void MeleeEffects(Player player, Rectangle hitbox)
+		{
+			// Creates a new dust particle effect on weapon swing at the hitbox, sets gravity off and velocity to 0 so it doesnt fly everywhere
+			int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, DustID.FlameBurst, 0f, 0f, 0, default(Color),2f);
+			Main.dust[dust].noGravity = true;
+			Main.dust[dust].velocity *= 0f;
+		}
+
+		public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.Ruby, 5);

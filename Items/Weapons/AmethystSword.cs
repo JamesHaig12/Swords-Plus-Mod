@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace SwordsPlus.Items
+namespace SwordsPlus.Items.Weapons
 {
 	public class AmethystSword : ModItem
 	{
