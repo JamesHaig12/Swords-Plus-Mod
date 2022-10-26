@@ -16,10 +16,10 @@ namespace SwordsPlus.Items
 		{
 			Item.damage = 55;
 			Item.DamageType = DamageClass.Melee;
-			Item.width = 40;
-			Item.height = 40;
-			Item.useTime = 5;
-			Item.useAnimation = 5;
+			Item.width = 10;
+			Item.height = 10;
+			Item.useTime = 25;
+			Item.useAnimation = 25;
 			Item.useStyle = 3;
 			Item.knockBack = 6;
 			Item.value = 2500;
@@ -27,8 +27,6 @@ namespace SwordsPlus.Items
 			Item.UseSound = SoundID.Item1;
 			Item.UseSound = SoundID.Grass;
 			Item.autoReuse = true;
-			Item.shoot = ProjectileID.Leaf;
-			Item.shootSpeed = 2.5f;
 		}
 
         public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
