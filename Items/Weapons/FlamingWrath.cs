@@ -27,6 +27,7 @@ namespace SwordsPlus.Items.Weapons
 			Item.knockBack = 6;
 			Item.value = 2500;
 			Item.rare = 2;
+			Item.crit = 8;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<FlameProjectile>();

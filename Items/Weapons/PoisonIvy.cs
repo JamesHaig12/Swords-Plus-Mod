@@ -27,6 +27,7 @@ namespace SwordsPlus.Items.Weapons
             Item.knockBack = 7;
             Item.value = 2500;
             Item.rare = 2;
+            Item.crit = 11;
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
         }
