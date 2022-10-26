@@ -8,7 +8,7 @@ namespace SwordsPlus.Items
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("TestSword"); // By default, capitalization in classnames will add spaces to the display name.
+			DisplayName.SetDefault("Test Sword"); // By default, capitalization in classnames will add spaces to the display name.
 			Tooltip.SetDefault("Test Sword For The Devs To Play About With");
 		}
 
