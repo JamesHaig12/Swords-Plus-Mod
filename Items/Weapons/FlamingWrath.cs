@@ -17,7 +17,7 @@ namespace SwordsPlus.Items.Weapons
 
 		public override void SetDefaults()
 		{
-			Item.damage = 60;
+			Item.damage = 65;
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 87;
 			Item.height = 87;
@@ -30,7 +30,7 @@ namespace SwordsPlus.Items.Weapons
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<FlameProjectile>();
-			Item.shootSpeed = 8f;
+			Item.shootSpeed = 9f;
 		}
 
         public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
@@ -56,6 +56,7 @@ namespace SwordsPlus.Items.Weapons
 			recipe.AddIngredient(ItemID.Ruby, 5);
 			recipe.AddIngredient(ItemID.HellstoneBar, 20);
 			recipe.AddIngredient(ItemID.Obsidian, 20);
+			recipe.AddIngredient(ItemID.SoulofNight, 5);
 			recipe.AddIngredient(ItemID.FieryGreatsword, 1);
 			recipe.AddTile(TileID.Anvils);
 			recipe.Register();
