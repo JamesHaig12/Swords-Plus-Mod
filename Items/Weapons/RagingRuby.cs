@@ -17,7 +17,7 @@ namespace SwordsPlus.Items.Weapons
 
 		public override void SetDefaults()
 		{
-			Item.damage = 56;
+			Item.damage = 65;
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 87;
 			Item.height = 87;
@@ -56,6 +56,7 @@ namespace SwordsPlus.Items.Weapons
 			recipe.AddIngredient(ItemID.Ruby, 5);
 			recipe.AddIngredient(ItemID.HellstoneBar, 20);
 			recipe.AddIngredient(ItemID.Obsidian, 20);
+			recipe.AddIngredient(ItemID.FieryGreatsword, 1);
 			recipe.AddTile(TileID.Anvils);
 			recipe.Register();
 		}
