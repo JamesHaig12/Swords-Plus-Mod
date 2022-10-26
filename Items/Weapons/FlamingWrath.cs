@@ -7,17 +7,17 @@ using Terraria.Audio;
 
 namespace SwordsPlus.Items.Weapons
 {
-	public class RagingRuby : ModItem
+	public class FlamingWrath : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Raging Ruby"); // By default, capitalization in classnames will add spaces to the display name.
+			DisplayName.SetDefault("Flaming Wrath"); // By default, capitalization in classnames will add spaces to the display name.
 			Tooltip.SetDefault("A Blade Forged With Shiny Red Gems And The Flaming Wrath Of Hell");
 		}
 
 		public override void SetDefaults()
 		{
-			Item.damage = 65;
+			Item.damage = 60;
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 87;
 			Item.height = 87;
