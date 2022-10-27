@@ -5,5 +5,10 @@ They may do more damage than we hoped and consequently lead to easier boss fight
 Balancing is something that is being worked on constantly.
 
 20 New Swords
+// 2 Implemented so far
 
-2 Implemented so far
+2 New Materials
+// Maybe More?
+
+1 New Buff
+// Maybe More?
