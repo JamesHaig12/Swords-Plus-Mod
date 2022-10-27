@@ -12,7 +12,7 @@ namespace SwordsPlus.Items.Weapons
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Flaming Wrath"); // By default, capitalization in classnames will add spaces to the display name.
-			Tooltip.SetDefault("A Blade Forged With Shiny Red Gems And The Flaming Wrath Of Hell");
+			Tooltip.SetDefault("Inflicts Burning To Struck Enemies\nA Blade Forged With Shiny Red Gems And The Flaming Wrath Of Hell");
 		}
 
 		public override void SetDefaults()
@@ -26,7 +26,7 @@ namespace SwordsPlus.Items.Weapons
 			Item.useStyle = 1;
 			Item.knockBack = 6;
 			Item.value = 2500;
-			Item.rare = 2;
+			Item.rare = 3;
 			Item.crit = 8;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;

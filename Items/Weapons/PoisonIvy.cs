@@ -12,7 +12,7 @@ namespace SwordsPlus.Items.Weapons
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Poison Ivy"); 
-            Tooltip.SetDefault("Dont Touch That!");
+            Tooltip.SetDefault("Inflicts Poison To Struck Enemies\nDont Touch That!");
         }
 
         public override void SetDefaults()
@@ -26,7 +26,7 @@ namespace SwordsPlus.Items.Weapons
             Item.useStyle = 3;
             Item.knockBack = 7;
             Item.value = 2500;
-            Item.rare = 2;
+            Item.rare = 4;
             Item.crit = 11;
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
@@ -51,7 +51,7 @@ namespace SwordsPlus.Items.Weapons
             recipe.AddIngredient(ItemID.SilverBar, 20);
             recipe.AddIngredient(ItemID.Stinger, 10);
             recipe.AddIngredient(ItemID.Vine, 15);
-            recipe.AddIngredient<Items.SwordSoul>(10);
+            recipe.AddIngredient<Items.AdvSwordSoul>(10);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
         }
