@@ -51,7 +51,7 @@ namespace SwordsPlus.Items.Weapons
             recipe.AddIngredient(ItemID.SilverBar, 20);
             recipe.AddIngredient(ItemID.Stinger, 10);
             recipe.AddIngredient(ItemID.Vine, 15);
-            recipe.AddIngredient(ItemID.SoulofNight, 10);
+            recipe.AddIngredient<Items.SwordSoul>(10);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
         }
