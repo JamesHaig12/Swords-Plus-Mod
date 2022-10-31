@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace SwordsPlus.Items.Projectiles
 {
-    public class WhiteLightningProjectile : ModProjectile
+    public class BlackLightningProjectile : ModProjectile
     {
         private const float increment = 16f;
 

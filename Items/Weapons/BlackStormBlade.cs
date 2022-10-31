@@ -9,17 +9,17 @@ using Terraria.DataStructures;
 
 namespace SwordsPlus.Items.Weapons
 {
-    public class WhiteStormBlade : ModItem
+    public class BlackStormBlade : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("White Stormblade"); // By default, capitalization in classnames will add spaces to the display name.
+            DisplayName.SetDefault("Black Stormblade"); // By default, capitalization in classnames will add spaces to the display name.
             Tooltip.SetDefault("Strike Your Enemies With The Wrath Of Zues\nCredits To AgentB90");
         }
 
         public override void SetDefaults()
         {
-            Item.damage = 30;
+            Item.damage = 90;
             Item.DamageType = DamageClass.Melee;
             Item.width = 80;
             Item.height = 80;
@@ -32,7 +32,7 @@ namespace SwordsPlus.Items.Weapons
             Item.crit = 4;
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
-            Item.shoot = ModContent.ProjectileType<WhiteLightningProjectile>();
+            Item.shoot = ModContent.ProjectileType<BlackLightningProjectile>();
             Item.shootSpeed = 3f;
         }
         public override void AddRecipes()
