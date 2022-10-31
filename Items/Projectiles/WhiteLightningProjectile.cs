@@ -35,6 +35,7 @@ namespace SwordsPlus.Items.Projectiles
             Projectile.ignoreWater = true; // Will not slow in water
             Projectile.tileCollide = false; // On collision disperses
         }
+
         public override void AI()
         {
             Projectile.ai[0] += 1f;
@@ -56,7 +57,6 @@ namespace SwordsPlus.Items.Projectiles
                     Projectile.alpha = 100;
                 }
             }
-
             if (++Projectile.frameCounter >= 2)
             {
                 Projectile.frameCounter = 0;

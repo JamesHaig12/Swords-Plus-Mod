@@ -41,15 +41,15 @@ namespace SwordsPlus.Items.Weapons
             recipe.AddRecipeGroup("Wood", 20);
             recipe.AddIngredient(ItemID.SilverBar, 20);
             recipe.AddIngredient(ItemID.Feather, 5);
-            recipe.AddIngredient<Items.SwordSoul>(10);
+            recipe.AddIngredient<Items.AdvSwordSoul>(10);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
-
+            // Need to think of a cool recipe for this one
             Recipe recipe2 = CreateRecipe();
             recipe2.AddRecipeGroup("Wood", 20);
             recipe2.AddIngredient(ItemID.GoldBar, 20);
             recipe2.AddIngredient(ItemID.Feather, 5);
-            recipe2.AddIngredient<Items.SwordSoul>(10);
+            recipe2.AddIngredient<Items.AdvSwordSoul>(10);
             recipe2.AddTile(TileID.Anvils);
             recipe2.Register();
         }
