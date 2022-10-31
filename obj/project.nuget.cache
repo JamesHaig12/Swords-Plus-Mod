@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pwpPCYKy7lUwsa4QqONR3MtRSWfH75QRY6W5IlqZ8ZpIBiPnWj58Cv8wV0UQBauCjZTM6r/sSRrA7Q1oSXJviA==",
+  "dgSpecHash": "tX4DDyGGBLI7kzWF/LtjdCeM1VCFvQX6FtowZZxgIWvwTqYyheIsKueVEe336C9AN3WymsKZTRXYVXz359j89A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Bee\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\SwordsPlusUpdated\\SwordsPlus.csproj",
+  "projectFilePath": "C:\\Users\\Bee\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\SwordsPlus\\SwordsPlus.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Bee\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
   ],

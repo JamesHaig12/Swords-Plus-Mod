@@ -37,11 +37,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bee\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\SwordsPlusUpdated\\SwordsPlus.csproj",
+      "projectUniqueName": "C:\\Users\\Bee\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\SwordsPlus\\SwordsPlus.csproj",
       "projectName": "SwordsPlus",
-      "projectPath": "C:\\Users\\Bee\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\SwordsPlusUpdated\\SwordsPlus.csproj",
+      "projectPath": "C:\\Users\\Bee\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\SwordsPlus\\SwordsPlus.csproj",
       "packagesPath": "C:\\Users\\Bee\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bee\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\SwordsPlusUpdated\\obj\\",
+      "outputPath": "C:\\Users\\Bee\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\SwordsPlus\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
