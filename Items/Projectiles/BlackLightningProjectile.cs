@@ -23,7 +23,7 @@ namespace SwordsPlus.Items.Projectiles
         public override void SetDefaults()
         {
             Projectile.DamageType = DamageClass.Melee; // Can be modified by melee accessories/armour
-            Projectile.damage = 55; // For this proj we will set a damage
+            Projectile.damage = 100; // For this proj we will set a damage
             Projectile.width = 40; // Hitbox
             Projectile.height = 1500; // Hitbox
             Projectile.aiStyle = 0; // Bullet AI Style, will travel straight
