@@ -13,8 +13,8 @@ namespace SwordsPlus.Items.Weapons
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Black Stormblade"); // By default, capitalization in classnames will add spaces to the display name.
-            Tooltip.SetDefault("Strike Your Enemies With The Wrath Of Zues\nInspired By AgentB90");
+            DisplayName.SetDefault("Great StormBlade"); // By default, capitalization in classnames will add spaces to the display name.
+            Tooltip.SetDefault("Strike Your Enemies With The Wrath Of Zeus\nInspired By AgentB90");
         }
 
         public override void SetDefaults()
@@ -38,19 +38,19 @@ namespace SwordsPlus.Items.Weapons
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddRecipeGroup("Wood", 20);
-            recipe.AddIngredient(ItemID.SilverBar, 20);
-            recipe.AddIngredient(ItemID.Feather, 5);
-            recipe.AddIngredient<Items.AdvSwordSoul>(10);
-            recipe.AddTile(TileID.Anvils);
+            recipe.AddIngredient(ItemID.TitaniumBar, 20);
+            recipe.AddIngredient(ItemID.Obsidian, 30);
+            recipe.AddIngredient<Items.AdvSwordSoul>(20);
+            recipe.AddIngredient<Weapons.WhiteStormBlade>(1);
+            recipe.AddTile(TileID.MythrilAnvil);
             recipe.Register();
-            // Need to think of a cool recipe for this one
+            
             Recipe recipe2 = CreateRecipe();
-            recipe2.AddRecipeGroup("Wood", 20);
-            recipe2.AddIngredient(ItemID.GoldBar, 20);
-            recipe2.AddIngredient(ItemID.Feather, 5);
-            recipe2.AddIngredient<Items.AdvSwordSoul>(10);
-            recipe2.AddTile(TileID.Anvils);
+            recipe2.AddIngredient(ItemID.AdamantiteBar, 20);
+            recipe2.AddIngredient(ItemID.Obsidian, 30);
+            recipe2.AddIngredient<Items.AdvSwordSoul>(20);
+            recipe2.AddIngredient<Weapons.WhiteStormBlade>(1);
+            recipe2.AddTile(TileID.MythrilAnvil);
             recipe2.Register();
         }
 

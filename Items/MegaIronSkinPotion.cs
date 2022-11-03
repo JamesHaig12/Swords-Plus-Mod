@@ -11,7 +11,7 @@ namespace SwordsPlus.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Mega Ironskin Potion");
-            Tooltip.SetDefault("Grants The User +12 Defense\nLasts For 4 Minutes");
+            Tooltip.SetDefault("Grants The User +12 Defense");
         }
 
         public override void SetDefaults()

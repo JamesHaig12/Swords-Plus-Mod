@@ -33,7 +33,7 @@ namespace SwordsPlus.Items.Projectiles
         {
             Vector2 target = Projectile.position;
             target.Y = target.Y - Player.defaultHeight;
-            Main.LocalPlayer.Teleport(target, 1);
+            Main.LocalPlayer.Teleport(target, 3);
             Main.LocalPlayer.AddBuff(BuffID.Confused, 360);
             Main.LocalPlayer.AddBuff(BuffID.Dazed, 180);
             return true;
@@ -43,19 +43,19 @@ namespace SwordsPlus.Items.Projectiles
         {
             // Creating dusts (particle effects) for the projectile, mix of 3 materials at different sizes
 
-            int dust = Dust.NewDust(Projectile.Center, 12, 12, DustID.Flare, 0f, 0f, 0, Color.Aquamarine, (float)Main.rand.Next(1, 5));
+            int dust = Dust.NewDust(Projectile.Center, 12, 12, DustID.Electric, 0f, 0f, 0, Color.Aquamarine, 0.5f);
             Main.dust[dust].noGravity = true;
             Main.dust[dust].velocity *= 3f;
 
-            int dust2 = Dust.NewDust(Projectile.Center, 12, 12, DustID.Torch, 0f, 0f, 0, Color.Aquamarine, (float)Main.rand.Next(1, 5));
+            int dust2 = Dust.NewDust(Projectile.Center, 12, 12, DustID.BlueTorch, 0f, 0f, 0, Color.Aquamarine, (float)Main.rand.Next(1, 2));
             Main.dust[dust2].noGravity = true;
             Main.dust[dust2].velocity *= 3f;
 
-            int dust3 = Dust.NewDust(Projectile.Center, 12, 12, DustID.MinecartSpark, 0f, 0f, 0, Color.Aquamarine, 3);
+            int dust3 = Dust.NewDust(Projectile.Center, 12, 12, DustID.BlueCrystalShard, 0f, 0f, 0, Color.Aquamarine, 1);
             Main.dust[dust3].noGravity = true;
             Main.dust[dust3].velocity *= 3f;
 
-            int dust4 = Dust.NewDust(Projectile.Center, 12, 12, DustID.MinecartSpark, 0f, 0f, 0, Color.Aquamarine, 2);
+            int dust4 = Dust.NewDust(Projectile.Center, 12, 12, DustID.Firework_Blue, 0f, 0f, 0, Color.Aquamarine, 1);
             Main.dust[dust4].noGravity = true;
             Main.dust[dust4].velocity *= 3f;
 

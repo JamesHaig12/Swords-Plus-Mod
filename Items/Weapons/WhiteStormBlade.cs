@@ -13,8 +13,8 @@ namespace SwordsPlus.Items.Weapons
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("White Stormblade"); // By default, capitalization in classnames will add spaces to the display name.
-            Tooltip.SetDefault("Strike Your Enemies With The Wrath Of Zues\nInspired By AgentB90");
+            DisplayName.SetDefault("StormBlade"); // By default, capitalization in classnames will add spaces to the display name.
+            Tooltip.SetDefault("Strike Your Enemies With The Wrath Of Zeus\nInspired By AgentB90");
         }
 
         public override void SetDefaults()

@@ -52,7 +52,7 @@ namespace SwordsPlus.Items.Weapons
             recipe.AddIngredient(ItemID.Stinger, 10);
             recipe.AddIngredient(ItemID.Vine, 15);
             recipe.AddIngredient<Items.AdvSwordSoul>(10);
-            recipe.AddTile(TileID.Anvils);
+            recipe.AddTile(TileID.MythrilAnvil);
             recipe.Register();
         }
     }
