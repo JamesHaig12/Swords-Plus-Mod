@@ -68,7 +68,7 @@ namespace SwordsPlus.Items.Weapons
                 position.Y -= Main.rand.Next(-100, 200);
                 velocity.X = 0;
                 velocity.Y = 0;
-                Projectile.NewProjectile(source, position.X, position.Y, velocity.X, velocity.Y, type, damage * 2, knockBack, player.whoAmI, 0, ceilingLimit);
+                Projectile.NewProjectile(source, position.X, position.Y, velocity.X, velocity.Y, type, damage * 2, knockBack, player.whoAmI, 0, ceilingLimit);                
             }
             return false;
         }

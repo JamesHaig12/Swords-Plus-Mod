@@ -1,14 +1,31 @@
-Swords Plus adds multiple unique swords, from pre hardmode to post moonlord progression!
+Welcome To The Swords Plus Mod!
+====================================================
 
+Swords Plus adds multiple unique swords, from early pre hardmode to post moonlord progression!
 These swords may break the game progression a little bit, some are upgrades to existing swords whilst some are new.
 They may do more damage than we hoped and consequently lead to easier boss fights.
+They may have effects that you think are overpowered or underpowered.
 Balancing is something that is being worked on constantly.
 
+MOD DETAILS
+===================================================
 20 New Swords
-// 2 Implemented so far
+// 6 Implemented so far
+// Maybe More?
 
 2 New Materials
 // Maybe More?
 
 1 New Buff
 // Maybe More?
+===================================================
+Credits for some weapons and thank you to:
+
+AgentB90
+https://www.reddit.com/user/AgentB90
+
+Az The Arcane
+https://www.artstation.com/arcaneaz 
+https://twitter.com/ABW28301
+
+ ChibiGalaxies

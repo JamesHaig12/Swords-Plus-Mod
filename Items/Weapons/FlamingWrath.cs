@@ -43,7 +43,6 @@ namespace SwordsPlus.Items.Weapons
 
 		public override void MeleeEffects(Player player, Rectangle hitbox)
 		{
-			// Creates a new dust particle effect on weapon swing at the hitbox, sets gravity off and velocity to 0 so it doesnt fly everywhere
 			int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, DustID.Flare, 0f, 0f, 0, default(Color),2f);
 			Main.dust[dust].noGravity = true;
 			Main.dust[dust].velocity *= 0f;
