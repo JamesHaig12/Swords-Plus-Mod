@@ -17,7 +17,7 @@ namespace SwordsPlus.Items.Weapons
 
         public override void SetDefaults()
         {
-            Item.damage = 85;
+            Item.damage = 90;
             Item.DamageType = DamageClass.Melee;
             Item.width = 40;
             Item.height = 40;
@@ -27,7 +27,7 @@ namespace SwordsPlus.Items.Weapons
             Item.knockBack = 7;
             Item.value = 2500;
             Item.rare = 4;
-            Item.crit = 11;
+            Item.crit = 17;
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
         }

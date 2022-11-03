@@ -14,7 +14,7 @@ namespace SwordsPlus.Items.Weapons
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("White Stormblade"); // By default, capitalization in classnames will add spaces to the display name.
-            Tooltip.SetDefault("Strike Your Enemies With The Wrath Of Zues\nCredits To AgentB90");
+            Tooltip.SetDefault("Strike Your Enemies With The Wrath Of Zues\nInspired By AgentB90");
         }
 
         public override void SetDefaults()
@@ -23,8 +23,8 @@ namespace SwordsPlus.Items.Weapons
             Item.DamageType = DamageClass.Melee;
             Item.width = 80;
             Item.height = 80;
-            Item.useTime = 20;
-            Item.useAnimation = 20;
+            Item.useTime = 30;
+            Item.useAnimation = 30;
             Item.useStyle = 1;
             Item.knockBack = 6;
             Item.value = 2500;
@@ -33,7 +33,7 @@ namespace SwordsPlus.Items.Weapons
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
             Item.shoot = ModContent.ProjectileType<WhiteLightningProjectile>();
-            Item.shootSpeed = 3f;
+            Item.shootSpeed = 1f;
         }
         public override void AddRecipes()
         {
@@ -66,18 +66,7 @@ namespace SwordsPlus.Items.Weapons
             {
                 position = Main.MouseWorld;
                 position.Y -= Main.rand.Next(-100, 200);
-                Vector2 heading = target - position;
-                if (heading.Y < 0f)
-                {
-                    heading.Y *= -1f;
-                }
-                if (heading.Y < 20f)
-                {
-                    heading.Y = 20f;
-                }
-                heading.Normalize();
-                heading *= new Vector2(velocity.X, velocity.Y).Length();
-                velocity.X = heading.X;
+                velocity.X = 0;
                 velocity.Y = 0;
                 Projectile.NewProjectile(source, position.X, position.Y, velocity.X, velocity.Y, type, damage * 2, knockBack, player.whoAmI, 0, ceilingLimit);
             }
