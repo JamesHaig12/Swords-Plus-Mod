@@ -43,7 +43,7 @@ namespace SwordsPlus.Items.Projectiles
         {
             // Creating dusts (particle effects) for the projectile, mix of 3 materials at different sizes
 
-            int dust = Dust.NewDust(Projectile.Center, 12, 12, DustID.Electric, 0f, 0f, 0, Color.Aquamarine, 0.5f);
+            int dust = Dust.NewDust(Projectile.Center, 12, 12, DustID.BlueFairy, 0f, 0f, 0, Color.Aquamarine, 0.5f);
             Main.dust[dust].noGravity = true;
             Main.dust[dust].velocity *= 3f;
 
@@ -54,11 +54,6 @@ namespace SwordsPlus.Items.Projectiles
             int dust3 = Dust.NewDust(Projectile.Center, 12, 12, DustID.BlueCrystalShard, 0f, 0f, 0, Color.Aquamarine, 1);
             Main.dust[dust3].noGravity = true;
             Main.dust[dust3].velocity *= 3f;
-
-            int dust4 = Dust.NewDust(Projectile.Center, 12, 12, DustID.Firework_Blue, 0f, 0f, 0, Color.Aquamarine, 1);
-            Main.dust[dust4].noGravity = true;
-            Main.dust[dust4].velocity *= 3f;
-
 
         }
     }
