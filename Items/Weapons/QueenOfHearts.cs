@@ -32,7 +32,7 @@ namespace SwordsPlus.Items.Weapons
             Item.crit = 4;
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
-            Item.shoot = ModContent.ProjectileType<BlackLightningProjectile>();
+            Item.shoot = ModContent.ProjectileType<CardProjectile>();
             Item.shootSpeed = 3f;
         }
     }
