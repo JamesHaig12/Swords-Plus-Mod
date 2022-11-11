@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "67c5iuDzh9Rl+k1LvaXvey0amdIxaIeQr/xmVkln4os7gkvH4tpIkzIGLjpnmJ5ymFpzLO1Ybq1vCgAvQlpQ5A==",
+  "dgSpecHash": "yIO4NfR5q9HMaKo+3CX01YE22BN5vxHUgZf/OoKxZ0YKD+8lf8/Fb/kpXfcAwiN4y8nOqs0yaOpkR+GjE6mQAg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\SwordsPlus\\SwordsPlus.csproj",
+  "projectFilePath": "C:\\Users\\james\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\SwordsPlus\\SwordsPlus.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\admin\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+    "C:\\Users\\james\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
   ],
   "logs": []
 }

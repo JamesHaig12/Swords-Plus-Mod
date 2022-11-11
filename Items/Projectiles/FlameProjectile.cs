@@ -7,11 +7,11 @@ using Terraria.Audio;
 
 namespace SwordsPlus.Items.Projectiles
 {
-    public class FlameProjectile : ModProjectile // Declare class as projectile type
+    public class CardProjectile : ModProjectile // Declare class as projectile type
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Flame Projectile"); // This will never be seen but is needed(?)
+            DisplayName.SetDefault("Card Projectile"); // This will never be seen but is needed(?)
         }
 
         public override void SetDefaults()
@@ -27,11 +27,6 @@ namespace SwordsPlus.Items.Projectiles
             Projectile.light = 0.35f; // Light emission
             Projectile.ignoreWater = false; // Will slow in water
             Projectile.tileCollide = true; // On collision disperses
-        }
-
-        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
-        {
-            SoundEngine.PlaySound(new SoundStyle("SwordsPlus/Sounds/FlameImpact").WithVolumeScale(10f).WithPitchOffset(.3f));
         }
 
         public override void AI()

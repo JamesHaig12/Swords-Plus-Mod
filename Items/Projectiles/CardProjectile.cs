@@ -1,36 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Terraria;
+using System;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria;
 using Microsoft.Xna.Framework;
 using Terraria.Audio;
 
 namespace SwordsPlus.Items.Projectiles
 {
-    public class CardProjectile : ModProjectile
+    public class FlameProjectile : ModProjectile // Declare class as projectile type
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Playing Card Projectile"); // This will never be seen but is needed(?)
+            DisplayName.SetDefault("Flame Projectile"); // This will never be seen but is needed(?)
         }
 
         public override void SetDefaults()
         {
-            Projectile.DamageType = DamageClass.Melee;
+            Projectile.DamageType = DamageClass.Melee; // Can be modified by melee accessories/armour
             Projectile.width = 12; // Hitbox
-            Projectile.height = 20; // Hitbox
+            Projectile.height = 12; // Hitbox
             Projectile.aiStyle = 0; // Bullet AI Style, will travel straight
             Projectile.friendly = true; // No player damage
             Projectile.hostile = false; // No player damage
-            Projectile.penetrate = 0; // Will penetrate 2 enemies before dispersing
+            Projectile.penetrate = 2; // Will penetrate 2 enemies before dispersing
             Projectile.timeLeft = 600; // 600 Frames aka 10 seconds of screentime
-            Projectile.light = 0f; // Light emission
+            Projectile.light = 0.35f; // Light emission
             Projectile.ignoreWater = false; // Will slow in water
-            Projectile.tileCollide = false; // On collision disperses
+            Projectile.tileCollide = true; // On collision disperses
+        }
+
+        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        {
+            SoundEngine.PlaySound(new SoundStyle("SwordsPlus/Sounds/FlameImpact").WithVolumeScale(10f).WithPitchOffset(.3f));
         }
 
         public override void AI()
