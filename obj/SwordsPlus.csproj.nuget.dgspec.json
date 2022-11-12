@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\james\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\SwordsPlus\\SwordsPlus.csproj": {}
+    "C:\\Users\\Bee\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\SwordsPlus\\SwordsPlus.csproj": {}
   },
   "projects": {
-    "C:\\Users\\james\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\SwordsPlus\\SwordsPlus.csproj": {
+    "C:\\Users\\Bee\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\SwordsPlus\\SwordsPlus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\james\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\SwordsPlus\\SwordsPlus.csproj",
+        "projectUniqueName": "C:\\Users\\Bee\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\SwordsPlus\\SwordsPlus.csproj",
         "projectName": "SwordsPlus",
-        "projectPath": "C:\\Users\\james\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\SwordsPlus\\SwordsPlus.csproj",
-        "packagesPath": "C:\\Users\\james\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\james\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\SwordsPlus\\obj\\",
+        "projectPath": "C:\\Users\\Bee\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\SwordsPlus\\SwordsPlus.csproj",
+        "packagesPath": "C:\\Users\\Bee\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Bee\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\SwordsPlus\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\james\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bee\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

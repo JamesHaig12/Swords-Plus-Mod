@@ -7,11 +7,11 @@ using Terraria.Audio;
 
 namespace SwordsPlus.Items.Projectiles
 {
-    public class CardProjectile : ModProjectile // Declare class as projectile type
+    public class FlameProjectile : ModProjectile // Declare class as projectile type
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Card Projectile"); // This will never be seen but is needed(?)
+            DisplayName.SetDefault("Flame Projectile"); // This will never be seen but is needed(?)
         }
 
         public override void SetDefaults()

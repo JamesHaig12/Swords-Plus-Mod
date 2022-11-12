@@ -33,7 +33,7 @@ namespace SwordsPlus.Items.Weapons
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
             Item.shoot = ModContent.ProjectileType<CardProjectile>();
-            Item.shootSpeed = 9f;
+            Item.shootSpeed = 11f;
         }
 
         public override void AddRecipes()
@@ -49,7 +49,7 @@ namespace SwordsPlus.Items.Weapons
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockBack)
         {
-            for(int i = 0; i < 3; i++)
+            for(int i = 0; i < 4; i++)
             {
                 Vector2 pertubedSpeed = new Vector2(velocity.X, velocity.Y).RotatedByRandom(MathHelper.ToRadians(12));
                 Projectile.NewProjectile(source, position.X, position.Y, pertubedSpeed.X, pertubedSpeed.Y, type, damage, knockBack, player.whoAmI);
