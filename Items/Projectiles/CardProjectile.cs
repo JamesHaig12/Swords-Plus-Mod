@@ -17,14 +17,14 @@ namespace SwordsPlus.Items.Projectiles
         public override void SetDefaults()
         {
             Projectile.DamageType = DamageClass.Melee; // Can be modified by melee accessories/armour
-            Projectile.width = 20; // Hitbox
-            Projectile.height = 12; // Hitbox
-            Projectile.aiStyle = 0; // Bullet AI Style, will travel straight
+            Projectile.width = 12; // Hitbox
+            Projectile.height = 20; // Hitbox
+            Projectile.aiStyle = -1; // Bullet AI Style, will travel straight
             Projectile.friendly = true; // No player damage
             Projectile.hostile = false; // No player damage
             Projectile.penetrate = 2; // Will penetrate 2 enemies before dispersing
             Projectile.timeLeft = 600; // 600 Frames aka 10 seconds of screentime
-            Projectile.light = 0.35f; // Light emission
+            Projectile.light = 0.2f; // Light emission
             Projectile.ignoreWater = false; // Will slow in water
             Projectile.tileCollide = true; // On collision disperses
         }
@@ -36,6 +36,12 @@ namespace SwordsPlus.Items.Projectiles
             int dust = Dust.NewDust(Projectile.Center, 12, 12, DustID.WhiteTorch, 0f, 0f, 0, default(Color), (float)Main.rand.Next(1, 2));
             Main.dust[dust].noGravity = true;
             Main.dust[dust].velocity *= 3f;
+
+            float velYMult = 0.1f;
+            Projectile.velocity.Y += velYMult;
+            float velRotation = Projectile.velocity.ToRotation();
+            Projectile.rotation = velRotation + MathHelper.ToRadians(90f);
+          
         }
     }
 }

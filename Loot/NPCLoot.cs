@@ -5,6 +5,7 @@ using Terraria.ModLoader;
 using SwordsPlus.Items;
 using System;
 using IL.Terraria.GameContent;
+using System.Security.Cryptography;
 
 namespace SwordsPlus.Loot
 {
@@ -17,7 +18,19 @@ namespace SwordsPlus.Loot
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SwordSoul>(), 3, 1, 4));
                 // Uses the basic common drop rule, ints at the end = 1/3 chance, 1 Min, 4 Max
                 // ItemDropRule.Common is what you would use in most cases, it simply drops the item with a fractional chance specified.
-				// The chanceDenominator int is used for the denominator part of the fractional chance of dropping this item.
+                // The chanceDenominator int is used for the denominator part of the fractional chance of dropping this item.
+            }
+        }
+
+        public override void SetupShop(int type, Chest shop, ref int nextSlot)
+        {
+            if (type == NPCID.Wizard)
+            { 
+                // We can use shopCustomPrice and shopSpecialCurrency to support custom prices and currency. Usually a shop sells an item for item.value. 
+                // Editing item.value in SetupShop is an incorrect approach.
+                shop.item[nextSlot].SetDefaults(ModContent.ItemType<DeckOfCards>());
+                shop.item[nextSlot].shopCustomPrice = 2500;
+                nextSlot++;
             }
         }
     }

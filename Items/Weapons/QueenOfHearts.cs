@@ -42,6 +42,7 @@ namespace SwordsPlus.Items.Weapons
             recipe.AddIngredient(ItemID.LifeCrystal, 5);
             recipe.AddIngredient(ItemID.TitaniumBar, 20);
             recipe.AddIngredient(ItemID.Obsidian, 20);
+            recipe.AddIngredient<Items.DeckOfCards>(1);
             recipe.AddIngredient<Items.AdvSwordSoul>(10);
             recipe.AddTile(TileID.MythrilAnvil);
             recipe.Register();

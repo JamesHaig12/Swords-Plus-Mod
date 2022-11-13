@@ -29,6 +29,12 @@ namespace SwordsPlus.Items.Projectiles
             Projectile.tileCollide = true; // On collision disperses
         }
 
+        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        {
+            SoundEngine.PlaySound(SoundID.Item74);
+            target.AddBuff(BuffID.OnFire, 180);
+        }
+
         public override void AI()
         {
             // Creating dusts (particle effects) for the projectile, mix of 3 materials at different sizes
