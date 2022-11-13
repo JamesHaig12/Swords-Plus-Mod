@@ -14,7 +14,7 @@ namespace SwordsPlus.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Deck Of Cards"); // By default, capitalization in classnames will add spaces to the display name.
-            Tooltip.SetDefault("There seems to be 52 of them");
+            Tooltip.SetDefault("There Seems To Be 52 Of Them");
         }
     }
 }

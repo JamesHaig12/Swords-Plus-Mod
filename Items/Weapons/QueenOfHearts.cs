@@ -19,7 +19,7 @@ namespace SwordsPlus.Items.Weapons
 
         public override void SetDefaults()
         {
-            Item.damage = 90;
+            Item.damage = 75;
             Item.DamageType = DamageClass.Melee;
             Item.width = 80;
             Item.height = 80;

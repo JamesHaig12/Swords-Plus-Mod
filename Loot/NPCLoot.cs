@@ -32,6 +32,8 @@ namespace SwordsPlus.Loot
                 shop.item[nextSlot].shopCustomPrice = 2500;
                 nextSlot++;
             }
+
+            //else if (type == NPCID.<NPC>){ } - we can use this to add items to other shops e.g dryad
         }
     }
 }

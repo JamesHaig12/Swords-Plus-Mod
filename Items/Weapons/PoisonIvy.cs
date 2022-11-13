@@ -12,7 +12,7 @@ namespace SwordsPlus.Items.Weapons
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Poison Ivy"); 
-            Tooltip.SetDefault("Inflicts Poison To Struck Enemies\nDont Touch That!");
+            Tooltip.SetDefault("Inflicts Poison To Struck Enemies\n'Dont Touch That!'");
         }
 
         public override void SetDefaults()

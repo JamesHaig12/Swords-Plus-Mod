@@ -13,8 +13,8 @@ namespace SwordsPlus.Items.Weapons
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Teleport Sword"); // By default, capitalization in classnames will add spaces to the display name.
-			Tooltip.SetDefault("Teleport hehe");
+			DisplayName.SetDefault("Xenon-54"); // By default, capitalization in classnames will add spaces to the display name.
+			Tooltip.SetDefault("Really messes with your head\nInspired By Az");
 		}
 
 		public override void SetDefaults()
@@ -23,8 +23,8 @@ namespace SwordsPlus.Items.Weapons
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 80;
 			Item.height = 80;
-			Item.useTime = 80;
-			Item.useAnimation = 80;
+			Item.useTime = 70;
+			Item.useAnimation = 70;
 			Item.useStyle = 1;
 			Item.knockBack = 6;
 			Item.value = 1000;
@@ -33,15 +33,16 @@ namespace SwordsPlus.Items.Weapons
             Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<TeleportProjectile>();
-			Item.shootSpeed = 15f;
+			Item.shootSpeed = 10f;
 		}
 
         public override void AddRecipes()
 		{
-			Recipe recipe = CreateRecipe(); 
-			recipe.AddIngredient(ItemID.DirtBlock, 10); 
-			recipe.AddRecipeGroup("Wood"); 
-			recipe.AddTile(TileID.WorkBenches); 
+			Recipe recipe = CreateRecipe();
+			recipe.AddRecipeGroup("Wood");
+			recipe.AddIngredient(ItemID.Diamond, 10);
+            recipe.AddIngredient(ItemID.MagicMirror, 1);
+            recipe.AddTile(TileID.WorkBenches); 
 			recipe.Register(); 
 		}
 	}
