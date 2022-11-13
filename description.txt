@@ -13,7 +13,7 @@ MOD DETAILS
 // 7 Implemented so far
 // Maybe More?
 
-2 New Materials
+3 New Materials
 // Maybe More?
 
 1 New Buff
