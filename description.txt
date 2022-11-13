@@ -10,7 +10,7 @@ Balancing is something that is being worked on constantly.
 MOD DETAILS
 ===================================================
 20 New Swords
-// 6 Implemented so far
+// 7 Implemented so far
 // Maybe More?
 
 2 New Materials
@@ -28,4 +28,4 @@ Az The Arcane
 https://www.artstation.com/arcaneaz 
 https://twitter.com/ABW28301
 
- ChibiGalaxies
+ChibiGalaxies

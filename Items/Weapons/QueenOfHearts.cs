@@ -21,14 +21,14 @@ namespace SwordsPlus.Items.Weapons
         {
             Item.damage = 75;
             Item.DamageType = DamageClass.Melee;
-            Item.width = 80;
-            Item.height = 80;
+            Item.width = 100;
+            Item.height = 100;
             Item.useTime = 35;
             Item.useAnimation = 35;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.knockBack = 6f;
             Item.value = 2500;
-            Item.rare = ItemRarityID.Orange;
+            Item.rare = ItemRarityID.LightRed;
             Item.crit = 4;
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
@@ -46,6 +46,15 @@ namespace SwordsPlus.Items.Weapons
             recipe.AddIngredient<Items.AdvSwordSoul>(10);
             recipe.AddTile(TileID.MythrilAnvil);
             recipe.Register();
+
+            Recipe recipe2 = CreateRecipe();
+            recipe2.AddIngredient(ItemID.LifeCrystal, 5);
+            recipe2.AddIngredient(ItemID.AdamantiteBar, 20);
+            recipe2.AddIngredient(ItemID.Obsidian, 20);
+            recipe2.AddIngredient<Items.DeckOfCards>(1);
+            recipe2.AddIngredient<Items.AdvSwordSoul>(10);
+            recipe2.AddTile(TileID.MythrilAnvil);
+            recipe2.Register();
         }
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockBack)

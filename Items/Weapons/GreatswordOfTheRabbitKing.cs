@@ -25,10 +25,10 @@ namespace SwordsPlus.Items.Weapons
             Item.height = 80;
             Item.useTime = 25;
             Item.useAnimation = 25;
-            Item.useStyle = 1;
+            Item.useStyle = ItemUseStyleID.Swing;
             Item.knockBack = 3;
             Item.value = 2500;
-            Item.rare = 2;
+            Item.rare = ItemRarityID.Green;
             Item.crit = 12;
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;

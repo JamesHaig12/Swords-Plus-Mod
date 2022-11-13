@@ -25,10 +25,10 @@ namespace SwordsPlus.Items.Weapons
             Item.height = 80;
             Item.useTime = 30;
             Item.useAnimation = 30;
-            Item.useStyle = 1;
+            Item.useStyle = ItemUseStyleID.Swing;
             Item.knockBack = 6;
             Item.value = 2500;
-            Item.rare = 3;
+            Item.rare = ItemRarityID.Orange;
             Item.crit = 4;
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
@@ -41,6 +41,7 @@ namespace SwordsPlus.Items.Weapons
             recipe.AddRecipeGroup("Wood", 20);
             recipe.AddIngredient(ItemID.SilverBar, 20);
             recipe.AddIngredient(ItemID.Feather, 5);
+            recipe.AddIngredient(ItemID.ThunderSpear, 1);
             recipe.AddIngredient<Items.SwordSoul>(10);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
@@ -49,6 +50,7 @@ namespace SwordsPlus.Items.Weapons
             recipe2.AddRecipeGroup("Wood", 20);
             recipe2.AddIngredient(ItemID.GoldBar, 20);
             recipe2.AddIngredient(ItemID.Feather, 5);
+            recipe.AddIngredient(ItemID.ThunderSpear, 1);
             recipe2.AddIngredient<Items.SwordSoul>(10);
             recipe2.AddTile(TileID.Anvils);
             recipe2.Register();
@@ -68,7 +70,7 @@ namespace SwordsPlus.Items.Weapons
                 position.Y -= Main.rand.Next(-100, 200);
                 velocity.X = 0;
                 velocity.Y = 0;
-                Projectile.NewProjectile(source, position.X, position.Y, velocity.X, velocity.Y, type, damage * 2, knockBack, player.whoAmI, 0, ceilingLimit);
+                Projectile.NewProjectile(source, position.X, position.Y, velocity.X, velocity.Y, type, damage, knockBack, player.whoAmI, 0, ceilingLimit);
             }
             return false;
         }

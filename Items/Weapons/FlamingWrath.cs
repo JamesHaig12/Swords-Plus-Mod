@@ -23,10 +23,10 @@ namespace SwordsPlus.Items.Weapons
 			Item.height = 87;
 			Item.useTime = 35;
 			Item.useAnimation = 35;
-			Item.useStyle = 1;
+			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 6;
 			Item.value = 2500;
-			Item.rare = 3;
+			Item.rare = ItemRarityID.Orange;
 			Item.crit = 8;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
@@ -56,8 +56,8 @@ namespace SwordsPlus.Items.Weapons
 			recipe.AddIngredient(ItemID.Ruby, 5);
 			recipe.AddIngredient(ItemID.HellstoneBar, 20);
 			recipe.AddIngredient(ItemID.Obsidian, 20);
-            recipe.AddIngredient<Items.SwordSoul>(10);
             recipe.AddIngredient(ItemID.FieryGreatsword, 1);
+            recipe.AddIngredient<Items.SwordSoul>(10);
 			recipe.AddTile(TileID.Anvils);
 			recipe.Register();
 		}
