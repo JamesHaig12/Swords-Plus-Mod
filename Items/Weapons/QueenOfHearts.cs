@@ -33,7 +33,7 @@ namespace SwordsPlus.Items.Weapons
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
             Item.shoot = ModContent.ProjectileType<CardProjectile>();
-            Item.shootSpeed = 11f;
+            Item.shootSpeed = 10f;
         }
 
         public override void AddRecipes()

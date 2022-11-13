@@ -14,7 +14,7 @@ namespace SwordsPlus.Items.Weapons
 
 		public override void SetDefaults()
 		{
-			Item.damage = 50000; // Damage
+			Item.damage = 5; // Damage
 			Item.DamageType = DamageClass.Melee; // What accessories and armour sets modify the damage
 			Item.width = 40; // Hitbox
 			Item.height = 40; // Hitbox
@@ -30,7 +30,14 @@ namespace SwordsPlus.Items.Weapons
 			Item.shootSpeed = 8f; // How fast the projectile moves
 		}
 
-		public override void AddRecipes()
+        public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+        {
+            // Add the Onfire buff to the NPC for 1 second when the weapon hits an NPC
+            // 60 frames = 1 second
+            target.AddBuff(BuffID.Stoned, 180);
+        }
+
+        public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe(); // Creates new recipe for item
 			recipe.AddIngredient(ItemID.DirtBlock, 10); // Adds 10 dirt blocks to recipe
