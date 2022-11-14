@@ -47,14 +47,10 @@ namespace SwordsPlus.Items.Weapons.StarSignSwords
         {
             velocity.X = 0;
             velocity.Y = 0;
-            Projectile.NewProjectile(source, position.X, position.Y - 60f, velocity.X, velocity.Y, type, damage * 2, knockback, player.whoAmI);
-            Projectile.NewProjectile(source, position.X - 70f, position.Y - 100f, velocity.X, velocity.Y, type, damage * 2, knockback, player.whoAmI);
-            Projectile.NewProjectile(source, position.X - 100f, position.Y - 100f, velocity.X, velocity.Y, type, damage * 2, knockback, player.whoAmI);
-            Projectile.NewProjectile(source, position.X - 150f, position.Y - 150f, velocity.X, velocity.Y, type, damage * 2, knockback, player.whoAmI);
-            Projectile.NewProjectile(source, position.X - 125f, position.Y - 200f, velocity.X, velocity.Y, type, damage * 2, knockback, player.whoAmI);
-            Projectile.NewProjectile(source, position.X - 35f, position.Y - 180f, velocity.X, velocity.Y, type, damage * 2, knockback, player.whoAmI);
-            Projectile.NewProjectile(source, position.X + 10f, position.Y - 160f, velocity.X, velocity.Y, type, damage * 2, knockback, player.whoAmI);
-            Projectile.NewProjectile(source, position.X + 50f, position.Y - 190f, velocity.X, velocity.Y, type, damage * 2, knockback, player.whoAmI);
+            Projectile.NewProjectile(source, position.X, position.Y - 80f, velocity.X, velocity.Y, type, damage * 2, knockback, player.whoAmI);
+            Projectile.NewProjectile(source, position.X - 30f, position.Y - 80f, velocity.X, velocity.Y, type, damage * 2, knockback, player.whoAmI);
+            Projectile.NewProjectile(source, position.X - 60f, position.Y - 60f, velocity.X, velocity.Y, type, damage * 2, knockback, player.whoAmI);
+            Projectile.NewProjectile(source, position.X + 30f, position.Y - 60f, velocity.X, velocity.Y, type, damage * 2, knockback, player.whoAmI);
             return false;
         }
     }

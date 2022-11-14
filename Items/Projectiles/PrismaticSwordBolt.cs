@@ -47,14 +47,25 @@ namespace SwordsPlus.Items.Projectiles
             
         public override void AI()
         {
+            Projectile.ai[0] += 1f;
+            if (Projectile.ai[0] < 50f)
+            {
+                // Fade in
+                Projectile.alpha -= 25;
+                if (Projectile.alpha < 100)
+                {
+                    Projectile.alpha = 100;
+                }
+            }
+
             Timer++;
             if (Timer > 60)
-            {
+            {             
                 for (int i = 0; i < 200; i++)
                 {
                     NPC target = Main.npc[i];
-                    //If the npc is hostile
-                    if (!target.friendly)
+                    //If the npc is hostile and active
+                    if (!target.friendly && target.active)
                     {
                         //Get the shoot trajectory from the Projectile and target
                         float shootToX = target.position.X + (float)target.width * 0.5f - Projectile.Center.X;
@@ -67,7 +78,7 @@ namespace SwordsPlus.Items.Projectiles
                             //Divide the factor, 3f, which is the desired velocity
                             distance = 3f / distance;
 
-                            //Multiply the distance by a multiplier if you wish the Projectile to have go faster
+                            //Multiply the distance by a multiplier if you wish the Projectile to go faster
                             shootToX *= distance * 5;
                             shootToY *= distance * 5;
 
@@ -80,6 +91,43 @@ namespace SwordsPlus.Items.Projectiles
                 Timer = 0;
             }
                                             
+        }
+        public override void Kill(int timeLeft)
+        {
+            // If the Projectile dies without hitting an enemy, crate a small explosion that hits all enemies in the area.
+            if (Projectile.penetrate == 1)
+            {
+                // Makes the Projectile hit all enemies as it circunvents the penetrate limit.
+                Projectile.maxPenetrate = -1;
+                Projectile.penetrate = -1;
+
+                int explosionArea = 60;
+                Vector2 oldSize = Projectile.Size;
+                // Resize the Projectile hitbox to be bigger.
+                Projectile.position = Projectile.Center;
+                Projectile.Size += new Vector2(explosionArea);
+                Projectile.Center = Projectile.position;
+
+                Projectile.tileCollide = false;
+                Projectile.velocity *= 0.01f;
+                // Damage enemies inside the hitbox area
+                Projectile.Damage();
+                Projectile.scale = 0.01f;
+
+                //Resize the hitbox to its original size
+                Projectile.position = Projectile.Center;
+                Projectile.Size = new Vector2(10);
+                Projectile.Center = Projectile.position;
+            }
+
+            SoundEngine.PlaySound(SoundID.Item10, Projectile.position);
+            for (int i = 0; i < 10; i++)
+            {
+                Dust dust = Dust.NewDustDirect(Projectile.position - Projectile.velocity, Projectile.width, Projectile.height, DustID.WhiteTorch, 0, 0, 100, Color.Lime, 0.8f);
+                dust.noGravity = true;
+                dust.velocity *= 2f;
+                dust = Dust.NewDustDirect(Projectile.position - Projectile.velocity, Projectile.width, Projectile.height, DustID.WhiteTorch, 0f, 0f, 100, Color.Lime, 0.5f);
+            }
         }
     }
 }
