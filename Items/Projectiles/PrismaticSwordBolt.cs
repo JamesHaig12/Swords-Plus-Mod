@@ -25,8 +25,8 @@ namespace SwordsPlus.Items.Projectiles
         {
             Projectile.CloneDefaults(ProjectileID.RainbowRodBullet);
             Projectile.DamageType = DamageClass.Melee;
-            Projectile.width = 22; // Hitbox
-            Projectile.height = 24; // Hitbox
+            Projectile.width = 54; // Hitbox
+            Projectile.height = 54; // Hitbox
             Projectile.damage = 120;
             Projectile.friendly = true;
             Projectile.hostile = false;
@@ -34,7 +34,8 @@ namespace SwordsPlus.Items.Projectiles
             Projectile.hide = false;
             Projectile.scale = 0.65f;
             Projectile.timeLeft = 400;
-            Projectile.light = 0.7f;
+            Projectile.light = 2f;
+            Projectile.alpha = 300;
         }
 
         public override bool PreDraw(ref Color lightColor)
@@ -60,12 +61,12 @@ namespace SwordsPlus.Items.Projectiles
 
             Timer++;
             if (Timer > 60)
-            {             
+            {               
                 for (int i = 0; i < 200; i++)
                 {
                     NPC target = Main.npc[i];
                     //If the npc is hostile and active
-                    if (!target.friendly && target.active)
+                    if (target.CanBeChasedBy(this, false) && target.active && !target.dontTakeDamage && !target.friendly && target.lifeMax > 5)
                     {
                         //Get the shoot trajectory from the Projectile and target
                         float shootToX = target.position.X + (float)target.width * 0.5f - Projectile.Center.X;
@@ -84,7 +85,7 @@ namespace SwordsPlus.Items.Projectiles
 
                             //Set the velocities to the shoot values
                             Projectile.velocity.X = shootToX;
-                            Projectile.velocity.Y = shootToY;
+                            Projectile.velocity.Y = shootToY;                            
                         }
                     }
                 }
@@ -101,7 +102,7 @@ namespace SwordsPlus.Items.Projectiles
                 Projectile.maxPenetrate = -1;
                 Projectile.penetrate = -1;
 
-                int explosionArea = 60;
+                int explosionArea = 90;
                 Vector2 oldSize = Projectile.Size;
                 // Resize the Projectile hitbox to be bigger.
                 Projectile.position = Projectile.Center;
@@ -123,10 +124,10 @@ namespace SwordsPlus.Items.Projectiles
             SoundEngine.PlaySound(SoundID.Item10, Projectile.position);
             for (int i = 0; i < 10; i++)
             {
-                Dust dust = Dust.NewDustDirect(Projectile.position - Projectile.velocity, Projectile.width, Projectile.height, DustID.WhiteTorch, 0, 0, 100, Color.Lime, 0.8f);
+                Dust dust = Dust.NewDustDirect(Projectile.position - Projectile.velocity, Projectile.width, Projectile.height, DustID.WhiteTorch, 0, 0, 100, default, 1.3f);
                 dust.noGravity = true;
                 dust.velocity *= 2f;
-                dust = Dust.NewDustDirect(Projectile.position - Projectile.velocity, Projectile.width, Projectile.height, DustID.WhiteTorch, 0f, 0f, 100, Color.Lime, 0.5f);
+                dust = Dust.NewDustDirect(Projectile.position - Projectile.velocity, Projectile.width, Projectile.height, DustID.WhiteTorch, 0f, 0f, 100, default, 1f);
             }
         }
     }

@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Audio;
 
 namespace SwordsPlus.Items.Weapons.StarSignSwords
 {
@@ -36,17 +37,21 @@ namespace SwordsPlus.Items.Weapons.StarSignSwords
 
         public override void AddRecipes()
         {
-            Recipe recipe = CreateRecipe(); // Creates new recipe for item
-            recipe.AddIngredient(ItemID.DirtBlock, 10); // Adds 10 dirt blocks to recipe
-            recipe.AddRecipeGroup("Wood"); // Special method to call all types of certain item. E.g this calls all wood types rather than just oak wood
-            recipe.AddTile(TileID.WorkBenches); // What tile the player needs to be near in order to craft item
-            recipe.Register(); // Initialises the recipe for actual use
+            Recipe recipe = CreateRecipe();
+            recipe.AddIngredient(ItemID.GoldBar, 20);
+            recipe.AddIngredient(ItemID.Obsidian, 25);
+            recipe.AddIngredient(ItemID.FallenStar, 35);
+            recipe.AddIngredient<Items.AdvSwordSoul>(20);
+            recipe.AddIngredient<Items.PrismaticCore>(1);
+            recipe.AddTile(TileID.MythrilAnvil);
+            recipe.Register();
         }
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
             velocity.X = 0;
             velocity.Y = 0;
+            SoundEngine.PlaySound(SoundID.Item78);
             Projectile.NewProjectile(source, position.X, position.Y - 80f, velocity.X, velocity.Y, type, damage * 2, knockback, player.whoAmI);
             Projectile.NewProjectile(source, position.X - 30f, position.Y - 80f, velocity.X, velocity.Y, type, damage * 2, knockback, player.whoAmI);
             Projectile.NewProjectile(source, position.X - 60f, position.Y - 60f, velocity.X, velocity.Y, type, damage * 2, knockback, player.whoAmI);

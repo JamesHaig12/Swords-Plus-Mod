@@ -6,6 +6,7 @@ using SwordsPlus.Items;
 using System;
 using IL.Terraria.GameContent;
 using System.Security.Cryptography;
+using System.Data;
 
 namespace SwordsPlus.Loot
 {
@@ -20,8 +21,20 @@ namespace SwordsPlus.Loot
                 // ItemDropRule.Common is what you would use in most cases, it simply drops the item with a fractional chance specified.
                 // The chanceDenominator int is used for the denominator part of the fractional chance of dropping this item.
             }
-        }
 
+            if (npc.type == NPCID.HallowBoss)
+            {
+                DaytimeDropCondition daytimeDropCondition = new DaytimeDropCondition();
+                IItemDropRule conditionalRule = new LeadingConditionRule(daytimeDropCondition);
+                int itemType = ModContent.ItemType<PrismaticCore>();
+                IItemDropRule rule = ItemDropRule.Common(itemType, chanceDenominator: 1);
+                conditionalRule.OnSuccess(rule);
+                npcLoot.Add(conditionalRule);
+            }
+
+        }
+        
+        // ModContent.ItemType<PrismaticCore>(), 1, 1, 1));
         public override void SetupShop(int type, Chest shop, ref int nextSlot)
         {
             if (type == NPCID.Wizard)
