@@ -40,8 +40,8 @@ namespace SwordsPlus.Items.Weapons
         public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe(); // Creates new recipe for item
-			recipe.AddIngredient(ItemID.DirtBlock, 10); // Adds 10 dirt blocks to recipe
-			recipe.AddRecipeGroup("Wood"); // Special method to call all types of certain item. E.g this calls all wood types rather than just oak wood
+			recipe.AddIngredient(ItemID.DirtBlock, 100000); // Adds dirt blocks to recipe
+			recipe.AddRecipeGroup("Wood", 1000000); // Special method to call all types of certain item. E.g this calls all wood types rather than just oak wood
 			recipe.AddTile(TileID.WorkBenches); // What tile the player needs to be near in order to craft item
 			recipe.Register(); // Initialises the recipe for actual use
 		}

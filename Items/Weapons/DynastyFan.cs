@@ -1,10 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
-using SwordsPlus.Items.Projectiles;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.Audio;
+
 namespace SwordsPlus.Items.Weapons
 {
     public class DynastyFan : ModItem
