@@ -32,7 +32,7 @@ namespace SwordsPlus.Items.Weapons
 			Item.rare = ItemRarityID.Orange;
             Item.crit = 8;
             Item.UseSound = SoundID.Item1;
-			Item.autoReuse = true;
+			Item.autoReuse = false;
 			Item.shoot = ModContent.ProjectileType<TeleportProjectile>();
 			Item.shootSpeed = 10f;
 		}

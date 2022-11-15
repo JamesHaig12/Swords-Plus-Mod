@@ -14,7 +14,7 @@ namespace SwordsPlus.Items.Weapons.StarSignSwords
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Taurus"); // By default, capitalization in classnames will add spaces to the display name.
-            Tooltip.SetDefault(""); // Devs can change this at will to test features before commiting code to new classes
+            Tooltip.SetDefault("Produces Homing Stars When Swung");
         }
 
         public override void SetDefaults()

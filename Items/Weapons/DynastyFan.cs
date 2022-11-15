@@ -34,18 +34,14 @@ namespace SwordsPlus.Items.Weapons
 
         public override void MeleeEffects(Player player, Rectangle hitbox)
         {
-            int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, DustID.Gold, 0f, 0f, 0, default(Color), 1f);
+            int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, DustID.Gold, 0f, 0f, 0, default(Color), 1.5f);
             Main.dust[dust].noGravity = true;
             Main.dust[dust].velocity *= 0f;
-
-            int dust2 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, DustID.Firework_Red, 0f, 0f, 0, default(Color), 1f);
-            Main.dust[dust2].noGravity = true;
-            Main.dust[dust2].velocity *= 0f;
         }
 
         public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
         {
-            Main.LocalPlayer.AddBuff(BuffID.Lucky, 120);
+            Main.LocalPlayer.AddBuff(BuffID.Lucky, 180);
         }
 
         public override void AddRecipes()

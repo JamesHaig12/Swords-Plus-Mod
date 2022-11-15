@@ -33,12 +33,12 @@ namespace SwordsPlus.Items
 
         public override void AddRecipes()
         {
-            Recipe recipe = CreateRecipe(1);
+            /*Recipe recipe = CreateRecipe(1);
             recipe.AddIngredient(ItemID.IronskinPotion, 1);
             recipe.AddIngredient(ItemID.UnicornHorn, 5);
             recipe.AddIngredient(ItemID.PixieDust, 5);
             recipe.AddTile(TileID.AlchemyTable);
-            recipe.Register();
+            recipe.Register();*/
 
             Recipe recipe2 = CreateRecipe(1);
             recipe2.AddIngredient(ItemID.IronskinPotion, 1);
