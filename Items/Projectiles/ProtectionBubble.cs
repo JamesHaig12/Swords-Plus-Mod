@@ -35,10 +35,10 @@ namespace SwordsPlus.Items.Projectiles
         public override void AI()
         {
 
-            for (int i = 0; i < 180; i++)
+            for (int i = 0; i < 720; i++)
             {
                 double degree = i * 4;
-                double radius = (degree) * (Math.PI / 180);
+                double radius = (degree) * (Math.PI / 1440);
                 double distance = 100;
 
                 float x2 = Projectile.Center.X - (int)(Math.Cos(radius) * distance) - Projectile.width / 2;
@@ -47,7 +47,7 @@ namespace SwordsPlus.Items.Projectiles
                 if (++customCounter % 10 == 0)
                 {
                     int dust = Dust.NewDust(new Vector2(x2 - Projectile.velocity.X, y2 - Projectile.velocity.Y), 1, 1, DustID.GoldFlame, 0f, 0.5f, 0, default(Color), 1f);
-                    Main.dust[dust].noGravity = false;
+                    Main.dust[dust].noGravity = true;
                 }
             }
 

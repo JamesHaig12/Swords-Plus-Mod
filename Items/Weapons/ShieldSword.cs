@@ -15,13 +15,14 @@ namespace SwordsPlus.Items.Weapons
         public int Timer;
         public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Sword Of Protection"); // By default, capitalization in classnames will add spaces to the display name.
-			Tooltip.SetDefault("<right> To Create A Ring Of Endurance At The Players Position"); // <right> calls the game to display whatever key is boud to user right click function
+			DisplayName.SetDefault("Sword Of Protection");
+			Tooltip.SetDefault("<right> To Create A Ring Of Endurance At The Players Position"); 
+            // <right> calls the game to display whatever key is boud to user right click function
 		}
 
 		public override void SetDefaults()
 		{
-			Item.damage = 50; 
+			Item.damage = 35; 
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 40; 
 			Item.height = 40;
@@ -71,11 +72,21 @@ namespace SwordsPlus.Items.Weapons
 
         public override void AddRecipes()
 		{
-			Recipe recipe = CreateRecipe(); // Creates new recipe for Item
-			recipe.AddIngredient(ItemID.DirtBlock, 100000); // Adds dirt blocks to recipe
-			recipe.AddRecipeGroup("Wood", 1000000); // Special method to call all types of certain Item. E.g this calls all wood types rather than just oak wood
-			recipe.AddTile(TileID.WorkBenches); // What tile the player needs to be near in order to craft Item
-			recipe.Register(); // Initialises the recipe for actual use
-		}
+			Recipe recipe = CreateRecipe();
+            recipe.AddRecipeGroup("Wood", 35);
+            recipe.AddIngredient(ItemID.IronBar, 20);
+            recipe.AddIngredient(ItemID.ArmoredCavefish, 5);
+            recipe.AddIngredient(ItemID.ShieldStatue, 1);  
+			recipe.AddTile(TileID.Anvils); 
+			recipe.Register();
+
+            Recipe recipe2 = CreateRecipe();
+            recipe2.AddRecipeGroup("Wood", 35);
+            recipe2.AddIngredient(ItemID.LeadBar, 20);
+            recipe2.AddIngredient(ItemID.ArmoredCavefish, 5);
+            recipe2.AddIngredient(ItemID.ShieldStatue, 1);
+            recipe2.AddTile(TileID.Anvils);
+            recipe2.Register();
+        }
 	}
 }

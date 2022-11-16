@@ -11,7 +11,7 @@ namespace SwordsPlus.Buffs
             DisplayName.SetDefault("Encumbered");
             Description.SetDefault("You Used Too Much Energy");
             Main.buffNoTimeDisplay[Type] = false;
-            Main.debuff[Type] = true;
+            Main.debuff[Type] = false;
         }
     }
 }
