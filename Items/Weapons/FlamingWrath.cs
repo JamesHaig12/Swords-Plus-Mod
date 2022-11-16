@@ -4,6 +4,8 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Audio;
+using Terraria.DataStructures;
+using Microsoft.Xna.Framework.Audio;
 
 namespace SwordsPlus.Items.Weapons
 {
@@ -47,8 +49,6 @@ namespace SwordsPlus.Items.Weapons
 			Main.dust[dust].noGravity = true;
 			Main.dust[dust].velocity *= 0f;
 		}
-
-
 
 		public override void AddRecipes()
 		{

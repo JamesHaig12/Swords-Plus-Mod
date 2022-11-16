@@ -35,7 +35,6 @@ namespace SwordsPlus.Items.Projectiles
             Projectile.scale = 0.65f;
             Projectile.timeLeft = 400;
             Projectile.light = 2f;
-            Projectile.alpha = 300;
         }
 
         public override bool PreDraw(ref Color lightColor)
