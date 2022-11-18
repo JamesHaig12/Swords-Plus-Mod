@@ -6,6 +6,9 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Graphics.Effects;
+using Terraria.Graphics.Shaders;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace SwordsPlus.Items.Weapons
 {
