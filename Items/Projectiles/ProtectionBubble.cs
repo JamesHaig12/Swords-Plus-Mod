@@ -13,8 +13,8 @@ namespace SwordsPlus.Items.Projectiles
 {
     public class ProtectionBubble : ModProjectile // Declare class as Projectile type
     {
-        private int rippleCount = 3;
-        private int rippleSize = 5;
+        private int rippleCount = 1;
+        private int rippleSize = 2;
         private int rippleSpeed = 15;
         private float distortStrength = 100f;
         public int customCounter;
@@ -40,17 +40,6 @@ namespace SwordsPlus.Items.Projectiles
             Projectile.tileCollide = false; // On collision disperses
         }
 
-        public override void Load()
-        {
-            // ...other Load stuff goes here
-
-            if (Main.netMode != NetmodeID.Server)
-            {
-                Ref<Effect> effect = new Ref<Effect>(ModContent.Request<Effect>("SwordsPlus/Effects/ShockwaveEffect", AssetRequestMode.ImmediateLoad).Value);
-                Filters.Scene["Shockwave"] = new Filter(new ScreenShaderData(effect, "Shockwave"), EffectPriority.VeryHigh);
-                Filters.Scene["Shockwave"].Load();
-            }
-        }
 
         public override void AI()
         {
@@ -71,22 +60,39 @@ namespace SwordsPlus.Items.Projectiles
                 }
             }
 
-            if (Main.netMode != NetmodeID.Server && !Filters.Scene["Shockwave"].IsActive())
-            {
-                Filters.Scene.Activate("Shockwave", Projectile.Center).GetShader().UseColor(rippleCount, rippleSize, rippleSpeed).UseTargetPosition(Projectile.Center);
-            }
-
-            if (Main.netMode != NetmodeID.Server && Filters.Scene["Shockwave"].IsActive())
-            {
-                float progress = (180f - Projectile.timeLeft) / 60f; // Will range from -3 to 3, 0 being the point where the bomb explodes.                
-                Filters.Scene["Shockwave"].GetShader().UseProgress(progress).UseOpacity(distortStrength * (1 - progress / 3f));
-            }
-
             if (Main.LocalPlayer.position.DistanceSQ(Projectile.Center) < 10000)
             {
                 Main.LocalPlayer.AddBuff(BuffID.Endurance, 200);
             }
         }
+
+    }
+}
+// Commented this out for now as i can not get it to work how i want it to
+// Gonna do more reserach on shaders in order to do this.
+/*
+
+          public override void Load()
+        {
+            // ...other Load stuff goes here
+
+            if (Main.netMode != NetmodeID.Server)
+            {
+                Ref<Effect> effect = new Ref<Effect>(ModContent.Request<Effect>("SwordsPlus/Effects/ShockwaveEffect", AssetRequestMode.ImmediateLoad).Value);
+                Filters.Scene["Shockwave"] = new Filter(new ScreenShaderData(effect, "Shockwave"), EffectPriority.VeryHigh);
+                Filters.Scene["Shockwave"].Load();
+            }
+        }
+                    if (Main.netMode != NetmodeID.Server && !Filters.Scene["Shockwave"].IsActive())
+                    {
+                        Filters.Scene.Activate("Shockwave", Projectile.Center).GetShader().UseColor(rippleCount, rippleSize, rippleSpeed).UseTargetPosition(Projectile.Center);
+                    }
+
+                    if (Main.netMode != NetmodeID.Server && Filters.Scene["Shockwave"].IsActive())
+                    {
+                        float progress = (180f - Projectile.timeLeft) / 60f;
+                        Filters.Scene["Shockwave"].GetShader().UseProgress(progress).UseOpacity(distortStrength * (1 - progress / 3f));
+                    }
 
         public override void Kill(int timeLeft)
         {
@@ -95,5 +101,4 @@ namespace SwordsPlus.Items.Projectiles
                 Filters.Scene["Shockwave"].Deactivate();
             }
         }
-    }
-}
+*/

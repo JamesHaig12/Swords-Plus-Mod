@@ -10,7 +10,7 @@ namespace SwordsPlus.Items.Weapons
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Dynasty Fan"); // By default, capitalization in classnames will add spaces to the display name.
-            Tooltip.SetDefault("The New Year Brings Good Fortune...\nKilling Enemies Increases Luck");
+            Tooltip.SetDefault("The New Year Brings Good Fortune...\nHitting Enemies Increases Luck");
         }
 
         public override void SetDefaults()
